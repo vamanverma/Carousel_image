@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iamges Carousel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            animation: bg 2s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @keyframes bg {
+            0% {
+                background: url(https://wallpaperaccess.com/full/210901.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            50% {
+                background: url(https://wallpaperaccess.com/full/210901.jpg);
+                background-repeat: no-repeat;
+                background-position: calc(100);
+                background-size: cover;
+            }
+            100% {
+                background: url(https://wallpaperaccess.com/full/210901.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        .box {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            transform-style: preserve-3d;
+            animation: a 10s linear infinite;
+            
+        }
+
+        @keyframes a {
+            0% {
+                transform: perspective(1000px) rotateX(0deg) rotateY(10deg);
+            }
+
+            100% {
+                transform: perspective(1000px) rotateX(360deg) rotateY(10deg);
+            }
+        }
+
+        .box span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateX(calc(var(--i)*45deg)) translateZ(300px);
+        }
+
+        .box span img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            object-fit: cover;
+            border-radius: 30px 0 30px 0;
+            object-position: center;
+            box-shadow: 5px 5px 20px 1px rgb(0, 0, 0);
+        }
+
+        h1 {
+            color: rgb(255, 255, 255);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>ARTIFICIAL INTELLIGENCE</h1>
+        <span style="--i:1"><img
+                src="https://img.freepik.com/free-photo/ai-technology-microchip-background-digital-transformation-concept_53876-124669.jpg?w=1380&t=st=1688650457~exp=1688651057~hmac=cb0db75f1624a134a87036f9c0e737afd9c7f473102fff18a8d3904bb4ddd3ba"
+                alt=""></span>
+        <span style="--i:2"><img
+                src="https://img.freepik.com/free-photo/robot-handshake-human-background-futuristic-digital-age_53876-129770.jpg?w=996&t=st=1688650482~exp=1688651082~hmac=e6192cf324fb737dcb89f636d6d30251176c548221c2c06655ad0bd507f76b8a"
+                alt=""></span>
+        <span style="--i:3"><img
+                src="https://img.freepik.com/free-photo/ai-nuclear-energy-background-future-innovation-disruptive-technology_53876-129783.jpg?w=996&t=st=1688650493~exp=1688651093~hmac=ccd8ac1932322b7735f0290dd2919509f515b2c96d88eba4b1845f7092c6c2aa"
+                alt=""></span>
+        <span style="--i:4"><img
+                src="https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?w=996&t=st=1688650508~exp=1688651108~hmac=8ee51f073cbb0734f6bde6ca9ba4a9b46ea55e089b916eee2af12b5469d8d5c3"
+                alt=""></span>
+        <span style="--i:5"><img
+                src="https://img.freepik.com/free-vector/sphere-grid-wave-with-binary-code-ai-artificial-intelligence-logo-hand-machine-learning-concept_127544-855.jpg?w=996&t=st=1688650522~exp=1688651122~hmac=4bbd3dafb21f8c1afd97157d431a46252ca29014818b2c13c8ab02354df63211"
+                alt=""></span>
+        <span style="--i:6"><img
+                src="https://img.freepik.com/free-photo/ai-cloud-concept-with-robot-arm_23-2149739748.jpg?w=996&t=st=1688650536~exp=1688651136~hmac=9e2ca76cd446fb9ff1221c4719e37eb2cac6e200c8355b39960719230a6d1234"
+                alt=""></span>
+        <span style="--i:7"><img
+                src="https://img.freepik.com/free-photo/ai-cloud-with-robot-head_23-2149739759.jpg?w=996&t=st=1688650549~exp=1688651149~hmac=5022538e5505c760b9572adbd3326007c39bfd0255069dd9b3083454c6855fb7"
+                alt=""></span>
+        <span style="--i:8"><img
+                src="https://img.freepik.com/free-photo/anthropomorphic-robot-indoors_23-2150405630.jpg?t=st=1688650572~exp=1688654172~hmac=45bbc6b2aff2965b0efa59008aead3473b213ac196c15859b32ba15c2ade58d4&w=996"
+                alt=""></span>
+    </div>
+</body>
+
+</html>
